@@ -51,3 +51,11 @@ php artisan queue:work
 
 # Start development server
 php artisan serve
+
+# Login details for test
+
+POST /login
+{
+  "email": "user@example.com",
+  "password": "password"
+}
