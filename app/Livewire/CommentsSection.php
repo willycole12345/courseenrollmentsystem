@@ -25,9 +25,9 @@ class CommentsSection extends Component
         ]);
         $this->reset('message');
     
-        $coursetitle = Course::where('id',$record->course_id)->get();
+        Course::where('id',$record->course_id)->get();
      
-       Notification::send(Auth::user()->email, new ProcessingCommentNotification($record->message,$coursetitle->title, Auth::user()->name));
+      // Notification::send(Auth::user()->email, new ProcessingCommentNotification($record->message,$coursetitle->title, Auth::user()->name));
 
     }
 

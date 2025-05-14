@@ -38,11 +38,11 @@ class CourseList extends Component
     }
 
     public function enroll($courseId) {
-       $record =  Enrollment::firstOrCreate(['user_id' => Auth::id(), 'course_id' => $courseId]);
-       $coursetitle = Course::where('id',$record->course_id)->get();
+       Enrollment::firstOrCreate(['user_id' => Auth::id(), 'course_id' => $courseId]);
+        // Course::where('id',$record->course_id)->get();
      //  dd( Auth::user()->email);
     //    dd( $coursetitle);
-     Notification::send(Auth::user()->email, new EnrollmentNotification($coursetitle->title,Auth::user()->name));
+    // Notification::send(Auth::user()->email, new EnrollmentNotification($coursetitle->title,Auth::user()->name));
 
 
     }
