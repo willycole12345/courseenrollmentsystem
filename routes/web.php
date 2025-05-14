@@ -5,9 +5,13 @@ use App\Livewire\CourseList;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 
-Route::get('/', function () {
-    return view('login');
-})->name('home');
+// Route::get('/', function () {
+//     return view('login');
+// })->name('home');
+
+Route::view('/', 'dashboard')
+    ->middleware(['auth', 'verified'])
+    ->name('dashboard');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
