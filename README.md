@@ -32,8 +32,8 @@ A Laravel 11-based course enrollment system using Livewire 3 for real-time inter
 # Installation
 
 
-git clone https://github.com/willycole12345/courseenrollmentsystemapi
-cd courseenrollmentsystemapi
+git clone https://github.com/willycole12345/courseenrollmentsystem
+cd courseenrollmentsystem
 
 # Install dependencies
 composer install
